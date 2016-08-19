@@ -1,0 +1,50 @@
+@import '../../../sass/variables';
+
+.result-row{
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+
+  .result-thumb{
+    margin: 0 15px 0 0;
+
+    img{
+      display: block;
+      height: 100px;
+    }
+  }
+  .result-info{
+    margin: 0 15px 0 0;
+
+    .result-address{
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 10px;
+
+      a{
+        color: $primary-color;
+      }
+    }
+  }
+  .result-distance{
+    margin-left: auto;
+    display: none;
+  }
+}
+
+@media only screen and (min-width : 480px) {
+  .result-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    .result-distance{
+      display: block;
+    }
+
+    .result-info .distance-row{
+      display: none;
+    }
+  }
+}

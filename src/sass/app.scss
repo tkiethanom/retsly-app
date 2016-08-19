@@ -1,0 +1,61 @@
+@import 'reset.scss';
+@import 'variables.scss';
+
+html{
+
+}
+body{
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+h1{
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+h2{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+h3{
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+p{
+  margin-bottom: 15px;
+}
+b, strong{
+  font-weight: 600;
+}
+.app-container{
+
+}
+.content-container{
+  padding: 25px;
+}
+.btn{
+  padding: 5px 15px;
+  border: 1px solid #eee;
+  background: $primary-color;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &.btn-lg{
+    font-size: 16px;
+    padding: 7px 20px;
+  }
+}
+.hide{
+  display: none;
+}
+.vertical-table{
+  th{
+    font-weight: 600;
+    text-align: left;
+    padding-right: 15px;
+  }
+}

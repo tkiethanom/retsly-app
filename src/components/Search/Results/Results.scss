@@ -1,0 +1,18 @@
+.results-container{
+  width: auto;
+  margin: auto;
+
+  .results-error{
+    text-align: center;
+    font-size: 20px;
+    color: #999;
+    padding: 15px 0 0 0;
+    margin: 0 0 25px 0;
+  }
+}
+
+@media only screen and (min-width : 992px) {
+  .results-container{
+    width: 900px;
+  }
+}

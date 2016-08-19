@@ -1,0 +1,37 @@
+@import "../../sass/variables.scss";
+
+.search-container{
+  margin: auto;
+  width: auto;
+
+  form{
+    text-align: right;
+    margin-bottom: 15px;
+
+    .input.text{
+      display: block;
+      padding: 10px 10px;
+      border-radius: 4px;
+      font-size: 20px;
+      border: 1px solid #A7D1EF;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+    }
+    .btn{
+      font-size: 20px;
+    }
+    i.fa-circle-o-notch{
+      font-size: 20px;
+      color: $alternate-color;
+      margin-right: 15px;
+    }
+  }
+}
+
+@media only screen and (min-width : 768px) {
+  .search-container{
+    width: 700px;
+  }
+}
+
