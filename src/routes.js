@@ -11,6 +11,7 @@ export default class Routes extends Component {
     this.routes =
       <Route path="/" component={Pages.AppPage}>
         <IndexRoute title="Home" component={Pages.HomePage} />
+        <Route path="/view/:id" component={Pages.View}/>
 
         <Route path="/404" component={Pages.Error404Page}/>
         <Route path="*" component={Pages.Error404Page}/>

@@ -3,9 +3,15 @@ import {connect} from 'react-redux';
 import Search from 'components/Search/Search';
 import SearchResults from 'components/Search/Results/Results';
 
+import {search} from 'actions/Search/SearchActions';
+
 export default class HomePage extends Component {
   componentWillMount() {
-    
+    const params = this.props.location.query;
+
+    if(params.q){
+      this.props.dispatch(search(params.q));
+    }
   }
 
   render() {

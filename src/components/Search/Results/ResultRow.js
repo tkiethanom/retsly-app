@@ -15,7 +15,7 @@ export default class Results extends Component {
       <div className="result-row">
         <div className="result-thumb">
           {(result.media.length)
-            ? <img src={result.media[0].url}/>
+            ? <Link to={"/view/"+result.id}><img src={result.media[0].url}/></Link>
             : <img src="http://placehold.it/130x100?text=No Image"/>
           }
         </div>
@@ -23,13 +23,16 @@ export default class Results extends Component {
           <div className="result-address">
             <Link to={"/view/"+result.id}>{result.address}</Link>
           </div>
+          <div className="tag-line">
+            {result.bedrooms} beds &middot; {result.baths + (result.halfBaths * .5)} baths &middot; {Intl.NumberFormat().format(result.livingArea)} sqft
+          </div>
           <div className="result-data">
             <table className="vertical-table">
-              <tr><th>Bedrooms</th><td>{result.bedrooms}</td></tr>
-              <tr><th>Bathrooms</th><td>{result.baths + (result.halfBaths * .5)}</td></tr>
-              <tr><th>Price</th><td>{Intl.NumberFormat([], {style: 'currency', currency: 'USD' }).format(result.price)}</td></tr>
-              <tr><th>List Date</th><td>{Intl.DateTimeFormat().format(Date.parse(result.listDate))}</td></tr>
-              <tr className="distance-row"><th>Distance</th><td>{distance} miles</td></tr>
+              <tbody>
+                <tr><th>Price</th><td>{Intl.NumberFormat([], {style: 'currency', currency: 'USD' }).format(result.price)}</td></tr>
+                <tr><th>List Date</th><td>{Intl.DateTimeFormat().format(Date.parse(result.listDate))}</td></tr>
+                <tr className="distance-row"><th>Distance</th><td>{distance} miles</td></tr>
+              </tbody>
             </table>
           </div>
         </div>

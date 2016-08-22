@@ -1,0 +1,66 @@
+@import "../../sass/variables";
+
+.listing-container{
+  width: auto;
+  margin: auto;
+  padding: 15px;
+  border: 1px solid $primary-color;
+  border-radius: 4px;
+  text-align: left;
+
+  .title{
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: $primary-color;
+  }
+  .tag-line{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+
+    span{
+      color: $primary-color;
+    }
+  }
+  .price{
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .media-container{
+    overflow: auto;
+    white-space: nowrap;
+    margin-bottom: 25px;
+
+    .media{
+      height: 250px;
+      margin-right: 15px;
+    }
+  }
+
+  .section-title{
+    margin: 10px 0;
+    text-decoration: underline;
+  }
+  table{
+    margin-bottom: 15px;
+  }
+  .listing-info{
+    ul{
+      list-style: inherit;
+      list-style-position: inside;
+
+      li{
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width : 992px) {
+  .listing-container{
+    width: 900px;
+  }
+}

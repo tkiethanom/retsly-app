@@ -51,15 +51,17 @@ export function search(search) {
               dispatch(setSearchError('No Listings Found'));
             }
 
-            dispatch(searchingDone(response));
+            dispatch(searchingDone());
           });
         } else {
-          dispatch(setSearchError('Request Failed'));
+          dispatch(setSearchError('Interal Server Error. We apologize for the inconvenience.'));
+          dispatch(searchingDone());
           console.log(response.statusText);
         }
       })
       .catch(error => {
-        dispatch(setSearchError('Request Failed'));
+        dispatch(setSearchError('Interal Server Error. We apologize for the inconvenience.'));
+        dispatch(searchingDone());
         console.log(error);
       });
   }

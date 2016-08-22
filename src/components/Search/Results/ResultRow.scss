@@ -7,7 +7,7 @@
   border-radius: 4px;
 
   .result-thumb{
-    margin: 0 15px 0 0;
+    margin: 0 15px 10px 0;
 
     img{
       display: block;
@@ -20,11 +20,21 @@
     .result-address{
       font-size: 18px;
       font-weight: 500;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
 
       a{
         color: $primary-color;
+        text-decoration: none;
+
+        &:hover{
+          text-decoration: underline;
+        }
       }
+    }
+    .tag-line{
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
     }
   }
   .result-distance{
@@ -38,6 +48,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+
+    .result-thumb{
+      margin-bottom: 0;
+    }
 
     .result-distance{
       display: block;

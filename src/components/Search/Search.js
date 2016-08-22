@@ -11,11 +11,7 @@ export default class Search extends Component {
   }
 
   componentWillMount(){
-    const params = this.props.location.query;
 
-    if(params.q){
-      this.props.dispatch(search(params.q));
-    }
   }
 
   render(){
@@ -30,7 +26,11 @@ export default class Search extends Component {
         <p>Type in an address or city to search for listings nearby</p>
         <form onSubmit={this.handleSearch}>
           <input className="input text" type="text" name="q" placeholder="Search" ref="search" defaultValue={q}/>
-          <i className={"fa fa-circle-o-notch fa-spin " + [(this.props.Search.isSearching) ? '' : 'hide']}></i>
+          {
+            (this.props.Search.isSearching) ?
+              <div className="loader"></div>
+              : null
+          }
           <button className="btn btn-lg">Submit</button>
         </form>
       </div>

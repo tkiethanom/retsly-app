@@ -21,9 +21,9 @@
     .btn{
       font-size: 20px;
     }
-    i.fa-circle-o-notch{
-      font-size: 20px;
-      color: $alternate-color;
+    .loader{
+      position: relative;
+      top: 5px;
       margin-right: 15px;
     }
   }
