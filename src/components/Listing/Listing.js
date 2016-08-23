@@ -17,7 +17,12 @@ export default class Listing extends Component {
 
     return (
       <div className="listing-container">
+        <Link to="/" className="close-button">
+          <span></span>
+          <span></span>
+        </Link>
         <div className="title">{data.address}</div>
+
         <div className="tag-line">
           {data.bedrooms} beds &middot; {data.baths + (data.halfBaths * .5)} baths &middot; {Intl.NumberFormat().format(data.livingArea)} sqft
         </div>
@@ -154,10 +159,11 @@ export default class Listing extends Component {
           ]
         }/>
 
+        <h3 className="section-title">Listing Office</h3>
         {(!this.props.Office.isLoading &&  this.props.Office.data) ?
           <ListingInfo data={[
             {
-              title: 'Office  Info',
+              title: null,
               data: [
                 {name: 'Name', value: this.props.Office.data.name, type: 'string'},
                 {name: 'Address', value: this.props.Office.data.address +', '+ this.props.Office.data.city + ', ' + this.props.Office.data.state  + ' ' + this.props.Office.data.zipCode, type: 'string'},
@@ -177,10 +183,11 @@ export default class Listing extends Component {
           : null
         }
 
+        <h3 className="section-title">Listing Agent</h3>
         {(!this.props.Agent.isLoading &&  this.props.Agent.data) ?
           <ListingInfo data={[
             {
-              title: 'Agent  Info',
+              title: null,
               data: [
                 {name: 'Name', value: this.props.Agent.data.fullName, type: 'string'},
                 {name: 'Home Phone', value: this.props.Agent.data.homePhone, type: 'string'},

@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router';
+
 import {connect} from 'react-redux';
 import {loadListing} from 'actions/Listing/ListingActions';
 import {loadOffice} from 'actions/Listing/OfficeActions';
@@ -26,7 +28,7 @@ export default class View extends Component {
     return (
       <div className="view-container">
         {(this.props.Listing.data) ? <Listing {...this.props} /> : null }
-        {(this.props.Listing.error) ? <div className="listing-error">{this.props.Listing.error}</div> : null }
+        {(this.props.Listing.error) ? <div className="listing-error"><p>{this.props.Listing.error}</p>  <p><Link to="/">Back to Search</Link></p></div> : null }
         {(this.props.Listing.isLoading) ? <div className="loader"></div> : null }
       </div>
     );

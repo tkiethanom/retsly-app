@@ -30,6 +30,12 @@ p{
 b, strong{
   font-weight: 600;
 }
+a{
+  color: $primary-color;
+}
+a:hover{
+  color: #3671be;
+}
 .app-container{
 
 }
@@ -59,7 +65,7 @@ b, strong{
       text-align: left;
       padding-right: 15px;
       padding-bottom: 5px;
-      white-space: nowrap;
+      line-height: 1.25em;
     }
     td{
       padding-bottom: 5px;
@@ -79,4 +85,14 @@ b, strong{
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@media only screen and (min-width : 992px) {
+  .vertical-table {
+    tr {
+      th {
+        white-space: nowrap;
+      }
+    }
+  }
 }

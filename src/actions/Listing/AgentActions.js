@@ -54,13 +54,13 @@ export function loadAgent(id) {
           });
 
         } else {
-          dispatch(setError('Interal Server Error. We apologize for the inconvenience.'));
+          dispatch(setError('Agent Not Found. We apologize for the inconvenience.'));
           dispatch(loadingDone());
           console.log(response.statusText);
         }
       })
       .catch(error => {
-        dispatch(setError('Interal Server Error. We apologize for the inconvenience.'));
+        dispatch(setError('Agent Not Found. We apologize for the inconvenience.'));
         dispatch(loadingDone());
         console.log(error);
       });

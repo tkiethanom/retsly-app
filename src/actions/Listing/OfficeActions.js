@@ -53,13 +53,13 @@ export function loadOffice(id){
             dispatch(loadingDone());
           });
         } else {
-          dispatch(setError('Interal Server Error. We apologize for the inconvenience.'));
+          dispatch(setError('Office Not Found. We apologize for the inconvenience.'));
           dispatch(loadingDone());
           console.log(response.statusText);
         }
       })
       .catch(error => {
-        dispatch(setError('Interal Server Error. We apologize for the inconvenience.'));
+        dispatch(setError('Office Not Found. We apologize for the inconvenience.'));
         dispatch(loadingDone());
         console.log(error);
       });

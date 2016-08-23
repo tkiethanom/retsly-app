@@ -12,8 +12,8 @@ export default class ListingInfo extends Component {
 
     this.props.data.forEach(function(table, i){
       output.push(
-        <div key={i}>
-          <h3 className="section-title">{table.title}</h3>
+        <div className="table-container" key={i} >
+          {(table.title !== null) ? <h3 className="section-title">{table.title}</h3> : null }
           <table className="vertical-table">
             <tbody>
               {table.data.map(function(row, j){
@@ -38,6 +38,9 @@ export default class ListingInfo extends Component {
     if(row.type === 'string'){
       if(row.value){
         output = row.value;
+      }
+      else{
+        output = 'N/A';
       }
     }
     else if(row.type === 'currency'){

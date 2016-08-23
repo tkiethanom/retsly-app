@@ -23,7 +23,7 @@ export default class Search extends Component {
 
     return (
       <div className="search-container">
-        <p>Type in an address or city to search for listings nearby</p>
+        <p>Type in an address or city to search for listings nearby. Try "624 K Street, Los Banos, CA" or "San Francisco".</p>
         <form onSubmit={this.handleSearch}>
           <input className="input text" type="text" name="q" placeholder="Search" ref="search" defaultValue={q}/>
           {

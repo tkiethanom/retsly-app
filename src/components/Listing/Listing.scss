@@ -13,6 +13,34 @@
     font-weight: 400;
     margin-bottom: 10px;
     color: $primary-color;
+    padding-right: 35px;
+  }
+  .close-button{
+    float: right;
+    position: relative;
+    margin-right: 0;
+    border: 1px solid #333;
+    border-radius: 4px;
+    height: 21px;
+    width: 21px;
+    cursor: pointer;
+
+    span{
+      display: block;
+      background-color: #333;
+      height: 3px;
+      width: 15px;
+      position: absolute;
+      top: 9px;
+      left: 3px;
+    }
+
+    span:nth-of-type(1){
+      transform: rotate(45deg);
+    }
+    span:nth-of-type(2){
+      transform: rotate(-45deg);
+    }
   }
   .tag-line{
     font-size: 18px;
@@ -44,16 +72,30 @@
     margin: 10px 0;
     text-decoration: underline;
   }
-  table{
-    margin-bottom: 15px;
+  .table-container{
+    overflow: auto;
+
+    table{
+      margin-bottom: 15px;
+
+      tr{
+        th{
+          padding-bottom: 10px;
+        }
+        td{
+          padding-bottom: 10px;
+        }
+      }
+    }
   }
+
   .listing-info{
     ul{
       list-style: inherit;
       list-style-position: inside;
 
       li{
-        white-space: nowrap;
+
       }
     }
   }
@@ -62,5 +104,13 @@
 @media only screen and (min-width : 992px) {
   .listing-container{
     width: 900px;
+
+    .listing-info{
+      ul{
+        li{
+          white-space: nowrap;
+        }
+      }
+    }
   }
 }
